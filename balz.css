@@ -1,0 +1,60 @@
+img {
+    margin: 100px;
+    border-radius: 30px;
+    border: 3px solid #ffffff;
+    box-shadow: 2px 1px 50px #ff619e;
+    transition: transform 2s linear;
+    margin-left: 10em;
+}
+
+img:hover {
+    transform: rotate3d(2, 1, 1, 360deg);  
+}
+
+.product-info {
+    text-align: right;
+    margin-top: -34em;
+    margin-bottom: 13em;
+    margin-right: 40px;
+    font-family: sans-serif;
+}
+
+.product-info h2 {
+    font-size: 40px;
+    font-weight: bolder;
+    font-family: serif;
+    font-style: italic;
+}
+.product-info p {
+    font-size: 20px;
+    font-weight: bolder;
+}
+.cena {
+    margin: 120px;
+    margin-top: 2em;
+    font-style: italic;
+}
+
+.button-krem {
+    text-align: center;
+    color: #692961;
+    text-shadow: 0px 0px 16px rgba(246,  104,  249, 0.7);
+    font-size: 30px;
+    padding: 5px;
+    text-decoration: none;
+    border-radius: 3px;
+    font-weight: 700;
+}
+
+.button:hover {
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.1);
+    color: #fff;
+    background: #ffdbfc;
+    transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    box-shadow: 0 0 5px rgb(252, 118, 223), 0 0 10px white, 0 0 20px rgb(223, 43, 154), 0 0 25px rgb(255, 179, 236), 0 0 30px rgb(194, 16, 143);
+}
+

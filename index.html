@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>blackpink.ru</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>BLACKPINK</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="osnova.html">Главная</a></li>
+                <div class="dropdown">
+                    <button class="dropbtn">Каталог</button>
+                    <div class="dropdown-content">
+                      <a href="balz.html">Макияж</a>
+                      <a href="#">Парфюмерия</a>
+                      <a href="krem.html">Уход за кожей</a>
+                      <a href="#">Аксессуары</a>
+                      <a href="shamp.html">Уход за волосами</a>
+                    </div>
+                  </div>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Скидки</a></li>
+                <li><a href="#">Подарочные карты</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="fon">
+    <section class="hero">
+        <script src="text.js"></script>
+        <h2 class="per" id="text">Лучшие продукты для вашей кожи</h2>
+        <script>
+            // Функция для дрыгания текста
+            function shakeText() {
+                const textElement = document.getElementById('text');
+                // Меняем положение текста случайным образом
+                textElement.style.transform = `translate(${Math.random() * 5 - 3.5}px, ${Math.random() * 10 - 3.5}px)`;
+            }
+    
+            // Интервал для постоянного дрыгания
+            setInterval(shakeText, 100); // Каждые 100 мс
+        </script>
+        <p>Откройте для себя нашу линию натуральной косметики и парфюмерии!</p>
+    </section>
+    <div class="ser" style="margin-top: -320px;"><span>&#10084;</span></div>
+    <div class="ser2" style="margin-top: -380px;"><span>&#10084;</span></div>
+    <section class="products">
+        <button style="margin-top: 1000px;"><a href="forma.html" target="_blank" class="button-like">КУПИТЬ СЕЙЧАС</a></button>
+        <i><h2>Популярные товары</h2>
+        <div class="product-grid">
+            <script src="script.js"></script>
+            <script src="script2.js"></script>
+            <script src="script3.js"></script>
+            <div class="product-card">
+                <img src="крем.jpg" alt="Товар 1" style="margin-top: 5em">
+                <h3></a>Крем для лица L'Oreal Paris Age Perfect Midnight Cream</h3>
+                <p style="margin-top: 82px"> от 1899 руб.</p>
+                <a href="krem.html" target="_blank" class="buy-btn">Купить</a>
+            </div>
+            <div class="product-card2">
+                <img src="шамп.jpg" alt="Товар 2">
+                <h3>Шампунь Matrix Instacure Build-a-Bond Mighty Bonds Shampoo</h3>
+                <p>от 1059 руб.</p>
+                <a href="shamp.html" target="_blank" class="buy-btn">Купить</a>
+            </div>
+            <div class="product-card3">
+                <img src="бальзам.jpg" alt="Товар 3">
+                <h3>Бальзам для губ MishLav</h3>
+                <p>от 1699 руб.</p>
+                <a href="balz.html" target="_blank" class="buy-btn">Купить</a>
+            </div>
+        </div>
+    </section>
+</div>
+    <footer>
+        <p>&copy; 2024 BLACKPINK. Все права защищены.</p>
+        <p><a href="#">Политика конфиденциальности</a> | <a href="#">Условия использования</a></p>
+    </footer>
+    <button onclick="getLocation()" style="margin-top: 20px;">Узнать местоположение</button>
+<p id="location"></p>
+<script>
+  function getLocation() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+      document.getElementById("location").innerHTML = "Геолокация не поддерживается.";
+    }
+  }
+
+  function showPosition(position) {
+    var lat = position.coords.latitude;
+    var lon = position.coords.longitude;
+    document.getElementById("location").innerHTML = "Широта: " + lat + "<br>Долгота: " + lon;
+  }
+</script>
+</body>
+</html>

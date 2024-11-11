@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дрыгающийся текст</title>
+    <style>
+        /* Стили для контейнера */
+        .text-container {
+            font-size: 24px; /* Размер шрифта */
+            display: inline-block; /* Позволяет двигать элемент */
+            transition: transform 0.1s; /* Плавный переход для движения */
+        }
+    </style>
+</head>
+<body>
+    <div class="text-container" id="text">Дрыгающийся текст</div>
+
+    <script>
+        // Функция для дрыгания текста
+        function shakeText() {
+            const textElement = document.getElementById('text');
+            // Меняем положение текста случайным образом
+            textElement.style.transform = `translate(${Math.random() * 5 - 3.5}px, ${Math.random() * 10 - 3.5}px)`;
+        }
+
+        // Интервал для постоянного дрыгания
+        setInterval(shakeText, 100); // Каждые 100 мс
+    </script>
+</body>
+</html>

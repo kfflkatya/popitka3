@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Load XML File</title>
+</head>
+<body>
+<button id="loadButton">Load XML File</button>
+<div id="xmlContent"></div>
+
+<script>
+document.getElementById('loadButton').addEventListener('click', function() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById('xmlContent').innerHTML = this.responseText;
+        }
+    };
+    xhttp.open("GET", "cjcj.xml", true);
+    xhttp.send();
+});
+</script>
+</body>
+</html>
